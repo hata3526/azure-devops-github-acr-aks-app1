@@ -12,6 +12,9 @@ spec:
       labels:
         app: app1nginxaks 
     spec:
+      tolerations:
+      - key: "CriticalAddonsOnly"
+        operator: "Exists"
       containers:
         - name: app1nginxaks 
           image: aksdevopsacro.azurecr.io/app1nginxaks
